@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <link rel="stylesheet" href="CSS/logInCSS.css">
+
+    <script>
+        //----------------------------------------------------------------------------------------------------------------------
+        function validateEmail() {
+            var email = document.getElementById("txtEmail").value;
+            var at = email.indexOf("@");
+            var dot = email.indexOf(".");
+            var len = email.length;
+
+            if ((at < 2) || (dot - at < 2) || (len - dot < 2)) {
+                alert("Invalid Email Format");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html"><img src="images/logo.png" width="125px" alt=""></a>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.php">Products</a></li>
+                        <li><a href="index.html#About-us">About Us</a></li>
+                    </ul>
+                </nav>
+                <a href="cart.php">
+                    <ion-icon name="cart-outline"></ion-icon>
+                </a>
+                <a href="login.html">
+                    <ion-icon name="person-outline"></ion-icon>
+                </a>
+            </div>
+            <hr>
+        </div>
+    </div>
+    </div>
+
+    <!-- END of NAV BAR -->
+
+    <section>
+        <div class="form-box">
+            <div class="form-value">
+                <form action="cus_area/login.php" method="post">
+                    <h2>Login</h2>
+                    <div class="inputbox">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <input type="email" id="txtEmail" name = "email" required>
+                        <label for="">Email</label>
+                    </div>
+                    <div class="inputbox">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input type="password" id="password" name="password" required>
+                        <label for="">Password</label>
+                    </div>
+                    <div class="forget">
+                        <label for=""><input type="checkbox">Remember Me <br><a href="#">Forgot Password</a></label>
+                    </div>
+                    <button onclick="validateEmail()">Log In</button>
+                    <div class="register">
+                        <p>Don't have an Account <br> <a href="signUp.html">Register</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- BEGIN OF FOOTER -->
+
+    <div class="footer">
+        <hr>
+        <p class="copyright">ShopWatch.com - 2023</p>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

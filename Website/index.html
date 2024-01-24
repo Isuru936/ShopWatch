@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ShopWatch</title>
+	<link rel="stylesheet" href="CSS/style.css">
+	<link rel=" preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+</head>
+
+<body>
+	<div class="full-page">
+		<div class="header">
+			<div class="container">
+				<div class="navbar">
+					<div class="logo">
+						<a href="index.html"><img src="images/logo.png" width="125px" alt=""></a>
+					</div>
+					<nav>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="products.php">Products</a></li>
+							<li><a href="#About-us">About Us</a></li>
+						</ul>
+					</nav>
+					<a href="cart.php">
+						<ion-icon name="cart-outline"></ion-icon>
+					</a>
+					<a href="cus_area/user_info.php">
+						<ion-icon name="person-outline"></ion-icon>
+					</a>
+				</div>
+				<hr>
+				<div class="slider">
+					<!-- image slide starts -->
+					<div class="slides">
+						<!-- radio button starts -->
+						<input type="radio" name="radio-btn" id="radio1">
+						<input type="radio" name="radio-btn" id="radio2">
+
+						<!-- slide image starts -->
+						<div class="slide first">
+							<div class="row">
+								<div class="col-2">
+									<img src="Images/explore-container.png" id="explore-container-imge1">
+								</div>
+								<div class="col-2">
+									<h1>Timeless style at Your Fingertips<br> </h1>
+									<p>Great watch is about more than just telling time. It's an expression of your
+										individuality
+										and
+										personal style.</p>
+									<a href="products.php" class="btn" id="btnExplore">Explore Now &#8594;</a>
+								</div>
+							</div>
+						</div>
+						<div class="slide-first">
+							<div class="row">
+								<div class="col-2">
+									<h1>Timeless Elegance, on Your Wrist<br> </h1>
+									<p>Great watch is about more than just telling time. It's an expression of your
+										individuality
+										and
+										personal style.</p>
+									<a href="products.php" class="btn">Discover &#8594;</a>
+								</div>
+								<div class="col-2">
+									<img src="Images/Luxury-Watch-PNG-Photos.png" id="explore-container-imge2">
+								</div>
+							</div>
+						</div>
+						<!-- slide image end -->
+
+						<!-- nav auto strt-->
+						<div class="navigation-auto">
+							<div class="auto-btn1"></div>
+							<div class="auto-btn2"></div>
+						</div>
+						<!-- nav auto end-->
+					</div>
+				</div>
+				<!-- image slide ends -->
+
+				<script type="text/javascript">
+					var counter = 1;
+					setInterval(function () {
+						document.getElementById('radio' + counter).checked = true;
+						counter++;
+						if (counter > 2) {
+							counter = 1;
+						}
+					}, 5000);
+				</script>
+
+			</div>
+		</div>
+		<hr>
+
+		<div class="circle-Row">
+			<div class="row">
+				<div class="circle1">
+					<img src="Images/Home-delivery.png" width="100px" alt="">
+
+				</div>
+				<div class="circle1">
+					<img src="Images/Free delivery .png" width=150px alt="">
+
+				</div>
+				<div class="circle1">
+					<img src="Images/fast-delivery.png" width="200px" alt="">
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<hr>
+
+	<!-- ------ testimonial -----  -->
+	<div class="testimonial">
+		<div class="small-container">
+			<div class="row">
+				<div class="col-3">
+					<img src="Images/left-quotes-sign.png" class="quotes">
+					<p>Lorem ipsum is simply dummy text of the priting and typesetting industry. lorem ipsum has
+						been
+						the industry's standard dummy text ever </p>
+					<div class="star">
+						&#9733;
+						&#9733;
+						&#9733;
+						&#9733;
+						&#9734;
+					</div>
+					<img src="images/user-1.jpg" alt="">
+					<h3>Sean Parker</h3>
+				</div>
+				<div class="col-3">
+					<img src="Images/left-quotes-sign.png" class="quotes">
+					<p>Lorem ipsum is simply dummy text of the priting and typesetting industry. lorem ipsum has
+						been
+						the industry's standard dummy text ever </p>
+					<div class="star">
+						&#9733;
+						&#9733;
+						&#9733;
+						&#9733;
+						&#9734;
+					</div>
+					<img src="images/user-2.jpg" alt="">
+					<h3>Kusal Mendis</h3>
+				</div>
+				<div class="col-3">
+					<img src="Images/left-quotes-sign.png" class="quotes">
+					<p>Lorem ipsum is simply dummy text of the priting and typesetting industry. lorem ipsum has
+						been
+						the industry's standard dummy text ever </p>
+					<div class="star">
+						&#9733;
+						&#9733;
+						&#9733;
+						&#9733;
+						&#9734;
+					</div>
+					<img src="images/user-3.jpg" alt="">
+					<h3>Gamini Bandara</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+
+	<div class="about-container">
+		<h1 id="About-us">About Us</h1>
+		<p>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia dolorem ad optio, in maiores adipisci
+			dolore eius et minima, nulla recusandae ipsum, qui iure beatae laborum itaque quam fugit? Consequuntur?
+			Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt placeat neque quisquam vitae hic cumque
+			dolor, sequi culpa consequuntur praesentium explicabo excepturi, mollitia ullam quia. Tempora labore quo
+			accusantium adipisci.
+			Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis consectetur omnis distinctio optio nisi
+			sunt ipsum? Aliquam, reprehenderit qui impedit illum aspernatur sequi consequuntur in, magnam, accusantium
+			cupiditate ea praesentium!
+		</p>
+	</div>
+
+	<!--	footer-->
+	<div class="footer">
+		<div class="contact">
+			<div class="contact-us">
+				<p>Contact Us</p>
+				<div class="cont-buttons">
+					<a href="facebook.com"><img src="Images/facebook (1).png" width=30px alt=""></a>
+					<a href="instagram.com"><img src="Images/instagram.png" width="30px" alt=""></a>
+					<a href="twitter.com"><img src="Images/twitter.png" width="30px" alt=""></a>
+					<a href="whatsapp.com"><img src="Images/whatsapp.png" width="30px" alt=""></a>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+
+			<br>
+			<!-- </div> -->
+			<div class="location">
+
+				<p>
+					<img src="Images/location.png" alt="" width="30px" class="location-point">
+					250/1, Peradeniya, Kandy
+				</p>
+			</div>
+			<hr>
+			<div class="about-us">
+				<p>
+				<ul>
+					<li><a href="">Terms and Conditions</a></li>
+					<li><a href="">About us</a></li>
+				</ul>
+				</p>
+			</div>
+
+			<!-- <hr> -->
+			<p class="copyright">ShopWatch.com - 2023</p>
+		</div>
+
+
+
+		<!-- add the about page here in the footer -->
+		<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+		<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

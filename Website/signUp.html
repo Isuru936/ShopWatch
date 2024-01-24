@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="CSS/signUpCSS.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html"><img src="images/logo.png" width="125px" alt=""></a>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.php">Products</a></li>
+                        <li><a href="index.html#About-us">About Us</a></li>
+                    </ul>
+                </nav>
+                <a href="cart.php">
+                    <ion-icon name="cart-outline"></ion-icon>
+                </a>
+                <a href="signUp.html">
+                    <ion-icon name="person-outline"></ion-icon>
+                </a>
+
+            </div>
+            <hr>
+        </div>
+    </div>
+
+    <!-- END of NAV BAR -->
+
+    <script>
+        //-----------------------------------------------------------------------------
+        function checkUsername() {
+            var usernameInput = document.getElementById('username');
+            var usernameValue = usernameInput.value;
+
+            if (usernameValue.includes(' ')) {
+                alert('Username should not contain spaces!');
+                return false;
+            }
+            return true;
+        }
+        //-----------------------------------------------------------------------------
+        function validateEmail() {
+            var email = document.getElementById("txtemail").value;
+            var at = email.indexOf("@");
+            var dot = email.indexOf(".");
+            var len = email.length;
+
+            if ((at < 2) || (dot - at < 2) || (len - dot < 2)) {
+                alert("Check the format of ur Email");
+                return false;
+            }
+            return true;
+        }
+        //-----------------------------------------------------------------------------
+        function validatePasword() {
+            var password = document.getElementById("txtPassword").value;
+            var cPassword = document.getElementById("txtConfirmPassword").value;
+
+            if ((password.length < 5) || (password != cPassword)) {
+                alert("Check ur password");
+                return false;
+            }
+            return true;
+        }
+        //-----------------------------------------------------------------------------
+        function validateCheckbox() {
+            var checkbox = document.getElementById('myCheckbox');
+
+            if (!checkbox.checked) {
+                alert('Please check the checkbox!');
+                return false;
+            }
+            return true;
+        }
+        //-----------------------------------------------------------------------------
+        function validateAll() {
+            if (validateCheckbox() &&validatePasword() && validateEmail()) {
+                // alert("Signed up ");
+            }
+            else {
+                event.preventDefault();
+            }
+        }
+
+    </script>
+
+    <section>
+        <div class="form-box">
+            <div class="form-value">
+                <form action="cus_area/register.php" method = "post">
+                    <h2>Sign Up</h2>
+                    <div class="inputbox">
+                        <ion-icon name="people-outline"></ion-icon>
+                        <input type="text" id="username" name="username" required>
+                        <label for="">User Name</label>
+                    </div>
+                    <div class="inputbox">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <input type="email" id="txtemail" name = email required>
+                        <label for="">Email</label>
+                    </div>
+                    <div class="inputbox">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input type="password" id="txtPassword" name="password" required>
+                        <label for="">Password</label>
+                    </div>
+                    <div class="inputbox">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input type="password" id="txtConfirmPassword" required>
+                        <label for="">Confirm Password</label>
+                    </div>
+                    <div class="register">
+                        <p><input type="checkbox" id="myCheckbox" required> I read and I agree to <br> the terms and conditions</p>
+                    </div>
+                    <button onclick="validateAll()">Sign In</button>
+                    <div class="register">
+                        <p>Already Signed In? <br> <a href="login.html">Log In</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- BEGIN OF FOOTER -->
+
+    <div class="footer">
+        <hr>
+        <p class="copyright">ShopWatch.com - 2023</p>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
